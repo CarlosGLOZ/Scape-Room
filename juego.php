@@ -18,19 +18,19 @@
         <div id="folder" class="padding-cpt">
             <section class="row-fileNav">
                 <div class="column-fileNav">
-                    <p class="sospechosos-nav" onclick="open_sospechosos()">Sospechosos</p>
+                    <button class="sospechosos-nav" onclick="open_sospechosos()"></button>
                 </div>
                 <div class="column-fileNav">
-                    <p class="forense-nav" onclick="open_forense()">Información Forense</p>
+                    <button class="forense-nav" onclick="open_forense()"></button>
                 </div>
                 <div class="column-fileNav">
-                    <p class="pruebas-nav" onclick="open_pruebas()">Pruebas adicionales</p>
+                    <button class="pruebas-nav" onclick="open_pruebas()"></button>
                 </div>
                 <div class="column-fileNav">
-                    <p class="escena-nav" onclick="open_escena()">Escena del crimen</p>
+                    <button class="escena-nav" onclick="open_escena()"></button>
                 </div>
                 <div class="column-fileNav">
-                    <p class="testimonios-nav" onclick="open_testimonios()">Testimonios</p>
+                    <button class="testimonios-nav" onclick="open_testimonios()"></button>
                 </div>
             </section>
 
@@ -56,17 +56,30 @@
                         <label for="sus6">Sospechoso 6</label>
 
                         <input type="submit" value="Seleccionar">
+
+                        <input type="submit" value="Comprobar">
                     </form>
                 </div>
                 <div id="forense-cont">
-                    forense
+                    <form action="./proc/proc.php" method="post">
+                        <!-- Tienes que poner la hora a la que murió la víctima -->
+
+                        <label for="hora-muerte">Hora de la muerte: </label>
+                        <input type="time" name="hora-muerte">
+
+                        <input type="submit" value="Comprobar">
+                    </form>
                 </div>
+
                 <div id="pruebas-cont">
                     pruebas adicionales
                 </div>
+
                 <div id="escena-cont">
+                    <!-- Varias pruebas que mandar al laboratorio, solo puedes mandar una -->
                     escena del crimen
                 </div>
+
                 <div id="testimonios-cont">
                     testimonios
                 </div>
