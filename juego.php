@@ -60,7 +60,7 @@
                 </div>
 
                 <div id="forense-cont">
-                    <form action="./proc/proc.php" method="post">
+                    <form action="./proc/validaciones/val_hora.php" method="post">
                         <!-- Tienes que poner la hora a la que murió la víctima -->
 
                         <label for="hora-muerte">Hora de la muerte: </label>
