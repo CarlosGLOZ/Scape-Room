@@ -60,6 +60,7 @@
                         <input type="submit" value="Comprobar">
                     </form>
                 </div>
+
                 <div id="forense-cont">
                     <form action="./proc/proc.php" method="post">
                         <!-- Tienes que poner la hora a la que murió la víctima -->
@@ -72,12 +73,28 @@
                 </div>
 
                 <div id="pruebas-cont">
+                    <!-- En la escena del crimen, encontramos una carta dirigida a la víctima, escrita por su amante -->
                     pruebas adicionales
                 </div>
 
                 <div id="escena-cont">
                     <!-- Varias pruebas que mandar al laboratorio, solo puedes mandar una -->
-                    escena del crimen
+                    <form action="./proc/proc.php" method="post">
+
+                        <label for="sus1">Papel de regalo</label>
+                        <input type="radio" name="pruebas" value="prueba1">
+                        
+                        <label for="sus2">Huellas de Zapato</label>
+                        <input type="radio" name="pruebas" value="prueba2">
+                        
+                        <label for="sus3">Arma</label>
+                        <input type="radio" name="pruebas" value="prueba3">
+
+                        <label for="sus4">Movil</label>
+                        <input type="radio" name="pruebas" value="prueba4">
+
+                        <input type="submit" value="Comprobar">
+                    </form>
                 </div>
 
                 <div id="testimonios-cont">
