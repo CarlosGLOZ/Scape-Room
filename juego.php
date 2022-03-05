@@ -36,28 +36,26 @@
 
             <div id="contents">
                 <div id="sospechosos-cont">
-                    <form action="./proc/proc.php" method="post">
-                        <input type="radio" name="sus" class="sospechoso1" value="sus1">
-                        <label for="sus1">Sospechoso 1</label>
+                    <form action="./proc/sus_comp.php" method="post">
+                        <input type="radio" name="sus" class="sospechoso1" value="larry_butz">
+                        <label for="sus1">Larry Butz</label>
 
-                        <input type="radio" name="sus" class="sospechoso2" value="sus2">
-                        <label for="sus2">Sospechoso 2</label>
+                        <input type="radio" name="sus" class="sospechoso2" value="matt_engarde">
+                        <label for="sus2">Matt Engarde</label>
 
-                        <input type="radio" name="sus" class="sospechoso3" value="sus3">
-                        <label for="sus3">Sospechoso 3</label>
+                        <input type="radio" name="sus" class="sospechoso3" value="maya_fey">
+                        <label for="sus3">Maya Fey</label>
 
-                        <input type="radio" name="sus" class="sospechoso4" value="sus4">
-                        <label for="sus4">Sospechoso 4</label>
+                        <input type="radio" name="sus" class="sospechoso4" value="lana_skye">
+                        <label for="sus4">Lana Skye</label>
 
-                        <input type="radio" name="sus" class="sospechoso5" value="sus5">
-                        <label for="sus5">Sospechoso 5</label>
+                        <input type="radio" name="sus" class="sospechoso5" value="william_stone">
+                        <label for="sus5">William Stone</label>
 
-                        <input type="radio" name="sus" class="sospechoso6" value="sus6">
-                        <label for="sus6">Sospechoso 6</label>
+                        <input type="radio" name="sus" class="sospechoso6" value="klavier_gavin">
+                        <label for="sus6">Klavier Gavin</label>
 
-                        <input type="submit" value="Seleccionar">
-
-                        <input type="submit" value="Comprobar">
+                        <input type="submit" value="Acusar">
                     </form>
                 </div>
 
@@ -93,7 +91,7 @@
                         <label for="prueba4">Movil</label>
                         <input type="radio" name="pruebas" value="prueba4">
 
-                        <input type="submit" value="Comprobar">
+                        <input type="submit" value="Mandar a laboratorio">
                     </form>
                 </div>
 
