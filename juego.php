@@ -81,16 +81,16 @@
                     <!-- Varias pruebas que mandar al laboratorio, solo puedes mandar una -->
                     <form action="./proc/proc.php" method="post">
 
-                        <label for="sus1">Papel de regalo</label>
+                        <label for="prueba1">Papel de regalo</label>
                         <input type="radio" name="pruebas" value="prueba1">
                         
-                        <label for="sus2">Huellas de Zapato</label>
+                        <label for="prueba2">Huellas de Zapato</label>
                         <input type="radio" name="pruebas" value="prueba2">
                         
-                        <label for="sus3">Arma</label>
+                        <label for="prueba3">Arma</label>
                         <input type="radio" name="pruebas" value="prueba3">
 
-                        <label for="sus4">Movil</label>
+                        <label for="prueba4">Movil</label>
                         <input type="radio" name="pruebas" value="prueba4">
 
                         <input type="submit" value="Comprobar">
