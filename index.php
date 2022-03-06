@@ -14,6 +14,28 @@
 
 </head>
 <body>
+    <?php
+        session_start();
+
+        $_SESSION["sospechosos"] = [
+            "Larry Butz",
+            "Matt Engarde",
+            "Maya Fey",
+            "Lana Skye",
+            "William Stone",
+            "Klavier Gavin",
+        ];
+
+        $_SESSION["seleccionados"] = [
+            "Larry Butz" => true,
+            "Matt Engarde" => true,
+            "Maya Fey" => true,
+            "Lana Skye" => true,
+            "William Stone" => true,
+            "Klavier Gavin" => true,
+        ];
+    ?>
+
     <div id="inicio">
         <h1 class="flex">CASO A24B1</h1>
         <a href="./juego.php" class="flex"><h2>Jugar</h2></a>

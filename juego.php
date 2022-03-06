@@ -36,24 +36,37 @@
 
             <div id="contents">
                 <div id="sospechosos-cont">
+                    <?php
+                        session_start();
+                
+                        $_SESSION["horas"] = [
+                            "Larry Butz" => array(0000, 2400),
+                            "Matt Engarde" => array(2000, 2400),
+                            "Maya Fey" => array(1400, 2100),
+                            "Lana Skye" => array(0000, 1300),
+                            "William Stone" => array(0000, 2000),
+                            "Klavier Gavin" => array(1900, 2130),
+                        ];
+
+                        $_SESSION["pruebas"] = [
+                            "Larry Butz" => "huellas",
+                            "Matt Engarde" => "papel_regalo",
+                            "Maya Fey" => "arma",
+                            "Lana Skye" => "movil",
+                            "William Stone" => "movil",
+                            "Klavier Gavin" => "huellas",
+                        ];
+                        
+                    ?>
                     <form action="./proc/sus_comp.php" method="post">
-                        <input type="radio" name="sus" class="sospechoso1" value="larry_butz">
-                        <label for="sus1">Larry Butz</label>
-
-                        <input type="radio" name="sus" class="sospechoso2" value="matt_engarde">
-                        <label for="sus2">Matt Engarde</label>
-
-                        <input type="radio" name="sus" class="sospechoso3" value="maya_fey">
-                        <label for="sus3">Maya Fey</label>
-
-                        <input type="radio" name="sus" class="sospechoso4" value="lana_skye">
-                        <label for="sus4">Lana Skye</label>
-
-                        <input type="radio" name="sus" class="sospechoso5" value="william_stone">
-                        <label for="sus5">William Stone</label>
-
-                        <input type="radio" name="sus" class="sospechoso6" value="klavier_gavin">
-                        <label for="sus6">Klavier Gavin</label>
+                        <?php
+                            foreach ($_SESSION["seleccionados"] as $nombre => $mostrar) {
+                                if ($mostrar) {
+                                    echo "<input type='radio' name='sus' class='sospechoso' value='{$nombre}'>";
+                                    echo "<label for='sus'>{$nombre}</label>";
+                                }
+                            }
+                        ?>
 
                         <input type="submit" value="Acusar">
                     </form>
@@ -77,19 +90,19 @@
 
                 <div id="escena-cont">
                     <!-- Varias pruebas que mandar al laboratorio, solo puedes mandar una -->
-                    <form action="./proc/proc.php" method="post">
+                    <form action="./proc/validaciones/val_prueba.php" method="post">
 
+                        <input type="radio" name="prueba" value="papel_regalo">
                         <label for="prueba1">Papel de regalo</label>
-                        <input type="radio" name="pruebas" value="prueba1">
                         
+                        <input type="radio" name="prueba" value="huellas">
                         <label for="prueba2">Huellas de Zapato</label>
-                        <input type="radio" name="pruebas" value="prueba2">
                         
+                        <input type="radio" name="prueba" value="arma">
                         <label for="prueba3">Arma</label>
-                        <input type="radio" name="pruebas" value="prueba3">
 
+                        <input type="radio" name="prueba" value="movil">
                         <label for="prueba4">Movil</label>
-                        <input type="radio" name="pruebas" value="prueba4">
 
                         <input type="submit" value="Mandar a laboratorio">
                     </form>
