@@ -40,21 +40,21 @@
                         session_start();
                 
                         $_SESSION["horas"] = [
-                            "Larry Butz" => array(0000, 2400),
-                            "Matt Engarde" => array(2000, 2400),
-                            "Maya Fey" => array(1400, 2100),
-                            "Lana Skye" => array(0000, 1300),
-                            "William Stone" => array(0000, 2000),
-                            "Klavier Gavin" => array(1900, 2130),
+                            "Larry_Butz" => array(0000, 2400),
+                            "Matt_Engarde" => array(2000, 2400),
+                            "Maya_Fey" => array(1400, 2100),
+                            "Lana_Skye" => array(0000, 1300),
+                            "William_Stone" => array(0000, 2000),
+                            "Klavier_Gavin" => array(1900, 2130),
                         ];
 
                         $_SESSION["pruebas"] = [
-                            "Larry Butz" => "huellas",
-                            "Matt Engarde" => "papel_regalo",
-                            "Maya Fey" => "arma",
-                            "Lana Skye" => "movil",
-                            "William Stone" => "movil",
-                            "Klavier Gavin" => "huellas",
+                            "Larry_Butz" => "huellas",
+                            "Matt_Engarde" => "papel_regalo",
+                            "Maya_Fey" => "arma",
+                            "Lana_Skye" => "movil",
+                            "William_Stone" => "movil",
+                            "Klavier_Gavin" => "huellas",
                         ];
 
                         if (isset($_GET["answsset"])) {
@@ -67,7 +67,7 @@
                         <?php
                             foreach ($_SESSION["seleccionados"] as $nombre => $mostrar) {
                                 if ($mostrar) {
-                                    echo "<input type='radio' name='sus' class='sospechoso' value='{$nombre}'>";
+                                    echo "<input type='radio' name='sus' class='sospechoso' '{$nombre}' value='{$nombre}'>";
                                     echo "<label for='sus'>{$nombre}</label>";
                                 }
                             }

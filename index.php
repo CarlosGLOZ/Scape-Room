@@ -18,21 +18,21 @@
         session_start();
 
         $_SESSION["sospechosos"] = [
-            "Larry Butz",
-            "Matt Engarde",
-            "Maya Fey",
-            "Lana Skye",
-            "William Stone",
-            "Klavier Gavin",
+            "Larry_Butz",
+            "Matt_Engarde",
+            "Maya_Fey",
+            "Lana_Skye",
+            "William_Stone",
+            "Klavier_Gavin",
         ];
 
         $_SESSION["seleccionados"] = [
-            "Larry Butz" => true,
-            "Matt Engarde" => true,
-            "Maya Fey" => true,
-            "Lana Skye" => true,
-            "William Stone" => true,
-            "Klavier Gavin" => true,
+            "Larry_Butz" => true,
+            "Matt_Engarde" => true,
+            "Maya_Fey" => true,
+            "Lana_Skye" => true,
+            "William_Stone" => true,
+            "Klavier_Gavin" => true,
         ];
     ?>
 

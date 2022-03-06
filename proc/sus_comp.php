@@ -2,7 +2,7 @@
     $sospechoso = $_POST['sus'];
 
     if (isset($sospechoso)) {
-        if ($sospechoso == "Klavier Gavin") {
+        if ($sospechoso == "Klavier_Gavin") {
             header("Location: ../pant_finales/ganada.php");
         } else {
             header("Location: ../pant_finales/perdida.php");
