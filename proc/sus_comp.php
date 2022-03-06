@@ -1,9 +1,13 @@
 <?php
     $sospechoso = $_POST['sus'];
 
-    if ($sospechoso == "Klavier Gavin") {
-        header("Location: ../pant_finales/ganada.php");
+    if (isset($sospechoso)) {
+        if ($sospechoso == "Klavier Gavin") {
+            header("Location: ../pant_finales/ganada.php");
+        } else {
+            header("Location: ../pant_finales/perdida.php");
+        }   
     } else {
-        header("Location: ../pant_finales/perdida.php");
+        header("Location: ../juego.php?answsset=false");
     }
 ?>

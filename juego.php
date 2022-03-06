@@ -56,6 +56,11 @@
                             "William Stone" => "movil",
                             "Klavier Gavin" => "huellas",
                         ];
+
+                        if (isset($_GET["answsset"])) {
+                            echo "<script>alert('Variable no establecida');</script>";
+                            header("./juego.php");
+                        }
                         
                     ?>
                     <form action="./proc/sus_comp.php" method="post">
