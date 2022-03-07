@@ -8,7 +8,11 @@
 </head>
 <body>
     <?php
+        session_start();
 
+        if (!$_SESSION["final_disponible"]) {
+            header("Location: ../juego.php");
+        }
     ?>
     ganada
 </body>

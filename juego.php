@@ -36,14 +36,7 @@
 
             <div id="contents" class="row">
                 <div id="sospechosos-cont">
-                    <div class="column-3 rlln">
-                        <div id="img-1"></div>
-                    </div>
-                    <div class="column-3">
-                        <div id="img-1"></div>
-                    </div>
-                    <div class="column-3">
-                        <div id="img-1"></div>
+                    <div class="column-2 rlln">
                     </div>
                     <?php
                         session_start();
@@ -65,6 +58,8 @@
                             "William_Stone" => "movil",
                             "Klavier_Gavin" => "huellas",
                         ];
+
+                        $_SESSION["final_disponible"] = false;
                         
                     ?>
                     <form action="./proc/sus_comp.php" method="post">
@@ -78,7 +73,9 @@
                             }
                         ?>
                     <div class="row">
-                        <input type="submit" value="Acusar" class="buttom">
+                        <div class="column-1">
+                        <input type="submit" value="Acusar" class="buttom usr">
+                        </div> 
                     </div>
                     </form>
                 </div>
@@ -92,6 +89,8 @@
 
                         <input type="submit" value="Comprobar">
                     </form>
+                    
+                    <div id="autopsia"></div>
                 </div>
 
                 <div id="pruebas-cont">men, encontramos una carta dirigida a la víctima, escrita por su amant
@@ -120,7 +119,7 @@
                 </div>
 
                 <div id="testimonios-cont">
-                    testimonios
+                    <div id="testimonios"></div>
                 </div>
             </div> 
         </div> 

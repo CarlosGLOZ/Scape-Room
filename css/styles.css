@@ -236,6 +236,26 @@ a {
 .rlln {
   padding-right: 13%;
 }
+#testimonios {
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 115%;
+  height: 115%;
+  background-image: url("../img/testimonios/testimonios.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+#autopsia {
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 75%;
+  height: 75%;
+  background-image: url("../img/forense/autopsia-completa.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow-y: hidden;
+  position: fixed;
+}
 /* Otras clases */
 @media only screen and (max-width: 1250px) {
   /*reglas*/
@@ -274,20 +294,78 @@ a {
   }
   /*-------------FIN TAMAÑO DE LA FUENTE A ESCALA---------------------- */
   /*------------------------SOSPECHOSOS IMAGENES------------------------*/
-  #img-1 {
-    height: 50vh;
-    background-image: url("../img/sospechosos/sospechoso-1.jpeg");
-    background-size: cover;
-    background-position: center;
+  #Maya_Fey {
+    height: 22vh;
+    width: 22%;
+    margin: 3%;
+  }
+  #Larry_Butz {
+    height: 22vh;
+    margin: 3%;
+    width: 22%;
+  }
+  #Matt_Engarde {
+    height: 22vh;
+    margin: 3%;
+    width: 22%;
+  }
+  #Lana_Skye {
+    height: 22vh;
+    margin: 3%;
+    width: 22%;
+  }
+  #William_Stone {
+    height: 22vh;
+    margin: 3%;
+    width: 22%;
+  }
+  #Klavier_Gavin {
+    height: 22vh;
+    margin: 3%;
+    width: 22%;
   }
 }
-@media only screen and (max-width: 1250px) and only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
+  /*reglas*/
+  /* column-3 pasará de tener 33.33% a 100% */
   .column-3 {
     width: 100%;
   }
+  /* column-4 pasará de tener 25% a 50% */
   .column-4 {
     width: 50%;
   }
+  #Maya_Fey {
+    height: 20vh;
+    width: 20%;
+    margin: 2%;
+  }
+  #Larry_Butz {
+    height: 20vh;
+    width: 20%;
+    margin: 2%;
+  }
+  #Matt_Engarde {
+    height: 20vh;
+    width: 20%;
+    margin: 2%;
+  }
+  #Lana_Skye {
+    height: 20vh;
+    width: 20%;
+    margin: 2%;
+  }
+  #William_Stone {
+    height: 20vh;
+    width: 20%;
+    margin: 2%;
+  }
+  #Klavier_Gavin {
+    height: 20vh;
+    width: 20%;
+    margin: 2%;
+  }
+  /*-------------------TAMAÑO DE LA FUENTE A ESCALA------------------ */
   html {
     font-size: 8px;
   }
@@ -312,6 +390,7 @@ a {
   h6 {
     font-size: 1.05rem;
   }
+  /*-------------FIN TAMAÑO DE LA FUENTE A ESCALA---------------------- */
   .padding-cpt {
     padding-left: 2%;
   }
