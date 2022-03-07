@@ -124,6 +124,9 @@ body {
 #contents {
   padding-top: 4%;
   color: black;
+  padding-right: 13%;
+  width: 85%;
+  height: 65%;
 }
 .padding-cpt {
   padding-left: 5%;
@@ -151,6 +154,87 @@ a {
 }
 .row-fileNav {
   height: 9%;
+}
+/*------------------------SOSPECHOSOS--------------------*/
+#Maya_Fey {
+  height: 24vh;
+  width: 24%;
+  background-image: url("../img/sospechosos/maya_fey.jpeg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  position: relative;
+  margin: 1%;
+}
+#Larry_Butz {
+  height: 24vh;
+  width: 24%;
+  background-image: url("../img/sospechosos/larry_butz.jpeg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  position: relative;
+  margin: 1%;
+}
+.usr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(223, 213, 213, 0.63);
+  padding-left: 20%;
+}
+#Lana_Skye {
+  height: 24vh;
+  width: 24%;
+  background-image: url("../img/sospechosos/lana_skye.jpeg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  position: relative;
+  margin: 1%;
+}
+#Matt_Engarde {
+  height: 24vh;
+  width: 24%;
+  background-image: url("../img/sospechosos/matt_engarde.jpeg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  position: relative;
+  margin: 1%;
+}
+#Klavier_Gavin {
+  height: 24vh;
+  width: 24%;
+  background-image: url("../img/sospechosos/klavier_gavin.jpeg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  position: relative;
+  margin: 1%;
+}
+#William_Stone {
+  height: 24vh;
+  width: 24%;
+  background-image: url("../img/sospechosos/william_stone.jpeg");
+  background-size: cover;
+  background-position: center;
+  float: left;
+  position: relative;
+  margin: 1%;
+}
+.buttom {
+  float: left;
+  position: relative;
+  padding: 3%;
+  color: white;
+  background-color: red;
+}
+/*-------------------MARGEN DEL CONTENIDO DE LAS CARPETAS---------------------*/
+.rlln {
+  padding-right: 13%;
 }
 /* Otras clases */
 @media only screen and (max-width: 1250px) {
@@ -189,8 +273,12 @@ a {
     font-size: 1.05rem;
   }
   /*-------------FIN TAMAÑO DE LA FUENTE A ESCALA---------------------- */
-  .padding-cpt {
-    padding-left: 3%;
+  /*------------------------SOSPECHOSOS IMAGENES------------------------*/
+  #img-1 {
+    height: 50vh;
+    background-image: url("../img/sospechosos/sospechoso-1.jpeg");
+    background-size: cover;
+    background-position: center;
   }
 }
 @media only screen and (max-width: 1250px) and only screen and (max-width: 900px) {

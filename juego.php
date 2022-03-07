@@ -34,8 +34,17 @@
                 </div>
             </section>
 
-            <div id="contents">
+            <div id="contents" class="row">
                 <div id="sospechosos-cont">
+                    <div class="column-3 rlln">
+                        <div id="img-1"></div>
+                    </div>
+                    <div class="column-3">
+                        <div id="img-1"></div>
+                    </div>
+                    <div class="column-3">
+                        <div id="img-1"></div>
+                    </div>
                     <?php
                         session_start();
                 
@@ -56,24 +65,21 @@
                             "William_Stone" => "movil",
                             "Klavier_Gavin" => "huellas",
                         ];
-
-                        if (isset($_GET["answsset"])) {
-                            echo "<script>alert('Variable no establecida');</script>";
-                            header("./juego.php");
-                        }
                         
                     ?>
                     <form action="./proc/sus_comp.php" method="post">
                         <?php
                             foreach ($_SESSION["seleccionados"] as $nombre => $mostrar) {
                                 if ($mostrar) {
-                                    echo "<input type='radio' name='sus' class='sospechoso' '{$nombre}' value='{$nombre}'>";
-                                    echo "<label for='sus'>{$nombre}</label>";
+                                    echo "<div id='{$nombre}'>";
+                                    echo "<div class='usr'><input type='radio' name='sus' class='sospechoso' value='{$nombre}'>";
+                                    echo "<label for='sus'>{$nombre}</label></div></div>";
                                 }
                             }
                         ?>
-
-                        <input type="submit" value="Acusar">
+                    <div class="row">
+                        <input type="submit" value="Acusar" class="buttom">
+                    </div>
                     </form>
                 </div>
 
@@ -88,8 +94,8 @@
                     </form>
                 </div>
 
-                <div id="pruebas-cont">
-                    <!-- En la escena del crimen, encontramos una carta dirigida a la víctima, escrita por su amante -->
+                <div id="pruebas-cont">men, encontramos una carta dirigida a la víctima, escrita por su amant
+                    <!-- En la escena del crie -->
                     pruebas adicionales
                 </div>
 
@@ -119,5 +125,8 @@
             </div> 
         </div> 
     </div>
+    <script>
+        document.getElementsByClassName("disclaimer")[0].style.display = "none";
+    </script>
 </body>
 </html>

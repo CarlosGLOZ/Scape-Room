@@ -3,31 +3,29 @@
 
     $prueba = $_POST["prueba"];
 
-    if (!isset($prueba)) {
-        header("Location: ../../juego.php?answsset=false");
-    } else {
-        $pruebas = $_SESSION["pruebas"];
+    $pruebas = $_SESSION["pruebas"];
 
-        print_r($_SESSION["pruebas"]);
-        echo "<br>";
+    // $culpables = [];
 
-        
-        print_r($_SESSION["seleccionados"]);
-        echo "<br>";
+    print_r($_SESSION["pruebas"]);
+    echo "<br>";
 
-        foreach ($pruebas as $nombre => $incriminatoria) {
-            if ($prueba == $incriminatoria && $_SESSION["seleccionados"][$nombre]) {
-                $_SESSION["seleccionados"][$nombre] = true;
-            } else {
-                $_SESSION["seleccionados"][$nombre] = false;
-            }
+    
+    print_r($_SESSION["seleccionados"]);
+    echo "<br>";
+
+    foreach ($pruebas as $nombre => $incriminatoria) {
+        if ($prueba == $incriminatoria && $_SESSION["seleccionados"][$nombre]) {
+            $_SESSION["seleccionados"][$nombre] = true;
+        } else {
+            $_SESSION["seleccionados"][$nombre] = false;
         }
-    
-        print_r($culpables);
-        echo "<br>";
-    
-        print_r($_SESSION["seleccionados"]);
-    
-        header("Location: ../../juego.php");
     }
+
+    print_r($culpables);
+    echo "<br>";
+
+    print_r($_SESSION["seleccionados"]);
+
+    header("Location: ../../juego.php");
 ?>

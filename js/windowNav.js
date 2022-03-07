@@ -1,7 +1,7 @@
 window.onload = function() {
     open_sospechosos();
 }
-
+document.getElementsByClassName("disclaimer")[0].style.display = "none";
 function open_sospechosos() {
     document.getElementById("forense-cont").style.display = "none";
     document.getElementById("pruebas-cont").style.display = "none";
