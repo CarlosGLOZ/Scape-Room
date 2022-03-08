@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CASO A24B1</title>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -62,22 +62,34 @@
                         $_SESSION["final_disponible"] = false;
                         
                     ?>
-                    <form action="./proc/sus_comp.php" method="post">
-                        <?php
-                            foreach ($_SESSION["seleccionados"] as $nombre => $mostrar) {
-                                if ($mostrar) {
-                                    echo "<div id='{$nombre}'>";
-                                    echo "<div class='usr'><input type='radio' name='sus' class='sospechoso' value='{$nombre}'>";
-                                    echo "<label for='sus'>{$nombre}</label></div></div>";
+                    <div class="form-sospechosos">
+                        <form action="./proc/sus_comp.php" method="post">
+                            <?php
+                                $nombres_mostrar = [
+                                    "Larry_Butz" => "Larry Butz",
+                                    "Matt_Engarde" => "Matt Engarde",
+                                    "Maya_Fey" => "Maya Fey",
+                                    "Lana_Skye" => "Lana Skye",
+                                    "William_Stone" => "William Stone",
+                                    "Klavier_Gavin" => "Klavier Gavin",
+                                ];
+
+                                // echo "<div class='form-sospechosos'>";
+                                foreach ($_SESSION["seleccionados"] as $nombre => $mostrar) {
+                                    if ($mostrar) {
+                                        echo "<div id='{$nombre}'>";
+                                        echo "<div class='usr'><input type='radio' name='sus' class='sospechoso' value='{$nombre}'>";
+                                        echo "<label for='sus'>{$nombres_mostrar[$nombre]}</label></div></div>";
+                                    }
                                 }
-                            }
-                        ?>
-                    <div class="row">
-                        <div class="column-1">
-                        <input type="submit" value="Acusar" class="buttom usr">
-                        </div> 
+                            ?>
+                        <div class="row">
+                            <div class="column-1">
+                            <input type="submit" value="Acusar" class="buttom usr">
+                            </div> 
+                        </div>
+                        </form>
                     </div>
-                    </form>
                 </div>
 
                 <div id="forense-cont">
@@ -93,9 +105,11 @@
                     <div id="autopsia"></div>
                 </div>
 
-                <div id="pruebas-cont">men, encontramos una carta dirigida a la víctima, escrita por su amant
-                    <!-- En la escena del crie -->
-                    pruebas adicionales
+                <div id="pruebas-cont">
+                    <h3><a href="./pruebas-adicionales.html" target="_blank">ABRIR REGISTRO DEL CASO</a></h3>
+                    <p>El registro contiene información adicional sobre el caso en detalle.</p>
+
+                    <h4><a href="./img/pruebas_adicionales/registro_A24B1.docx" dowload>Descargar registro del caso</a></h4>
                 </div>
 
                 <div id="escena-cont">
@@ -116,6 +130,8 @@
 
                         <input type="submit" value="Mandar a laboratorio">
                     </form>
+
+                    <div id="pruebas-escena"></div>
                 </div>
 
                 <div id="testimonios-cont">
